@@ -4,7 +4,7 @@ A simple shell script to help you easily change the default boot logo / lock scr
 
 ## Disclaimer
 Running any script requiring root permissions can be potentially dangerous. The simple checks the script performs before moving images should prevent any castostropic disasters, but I make no guarantees.
-In the case that you somehow upload an image the system can't recognize or find upon booting, it simply continues and displays no image (black screen).
+In the case that you somehow upload an image the system can't recognize or find upon booting, it should continue and display no image (black screen).
 
 
 ## Requirements
