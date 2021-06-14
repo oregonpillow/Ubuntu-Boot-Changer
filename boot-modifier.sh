@@ -3,24 +3,39 @@
 timestamp=$(date "+%d%m%Y%H%M%S")
 LOGO=/usr/share/plymouth/ubuntu-logo.png
 WATERMARK=/usr/share/plymouth/themes/spinner/watermark.png
-WARNING="does not exist, the script won't work for your system."
+NEW_LOGO=./new-logo.png
+NEW_WATERMARK=./new-watermark.png
+DNE="does not exist"
+WARNING="the script won't work for your system."
 
 if [ ! -d ./backup ]; then
     mkdir ./backup
 fi
 
 if [ ! -f "$LOGO" ]; then
-    echo "$LOGO $WARNING"
+    echo "$LOGO $DNE"
 fi
 
 if [ ! -f "$WATERMARK" ]; then
-    echo "$WATERMARK $WARNING"
+    echo "$WATERMARK $DNE"
 fi
 
 if [ ! -f "$LOGO" ] || [ ! -f "$WATERMARK" ]; then
+    echo "$WARNING"
     exit 1
 fi
 
+if [ ! -f "$NEW_LOGO" ]; then
+    echo "$NEW_LOGO $DNE"
+fi
+
+if [ ! -f "$NEW_WATERMARK" ]; then
+    echo "$NEW_WATERMARK $DNE"
+fi
+
+if [ ! -f "$NEW_LOGO" ] || [ ! -f "$NEW_WATERMARK" ]; then
+    exit 1
+fi
 
 sudo mv $LOGO ./backup && mv ./backup/ubuntu-logo.png ./backup/ubuntu-logo_$timestamp.png
 sudo mv $WATERMARK ./backup && mv ./backup/watermark.png ./backup/watermark_$timestamp.png
