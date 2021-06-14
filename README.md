@@ -15,7 +15,6 @@ A simple shell script to help you easily change the default boot logo / lock scr
 ```
 git clone https://github.com/oregonpillow/Ubuntu-Boot-Changer.git
 cd Ubuntu-Boot-Changer
-#make script executable
 chmod +x boot-modifier.sh
 bash boot-modifier.sh
 ```
