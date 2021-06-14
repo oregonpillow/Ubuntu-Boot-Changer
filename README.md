@@ -24,3 +24,7 @@ bash boot-modifier.sh
 - checks to make sure you have your 2 new images ready otherwise exits
 - Assuming above 2 points are fine, creates a backup folder in the current dir and backups the current watermark/logo
 - replaces the current watermark/logo with your new images.
+
+## Disclaimer
+Running any script requiring root permissions can be potentially dangerous. The simple checks the script performs before moving images should prevent any castostropic disasters, but I make no guarantees.
+In the case that you somehow upload an image the system can't recognize or find upon booting, it simply continues and displays no image (black screen).
