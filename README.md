@@ -3,8 +3,8 @@ A simple shell script to help you easily change the default boot logo / lock scr
 
 ## Requirements
 - An Ubuntu version that uses Plymouth (the application which provides the graphical "splash" screen when booting and shutting down an Ubuntu system).
-- sudo permissions (will be modifying images within Plymouth)
-- place 2 PNG images for the logo and watermark inside the Ubuntu-Boot-Changer folder. *MUST BE NAMED new-logo.png & new-watermark.png respectively*
+- **root permissions** (will be modifying images within Plymouth)
+- after cloning repo, place 2 PNG images for your new logo and new watermark inside Ubuntu-Boot-Changer folder. **MUST BE NAMED *new-logo.png* & *new-watermark.png* respectively**
 
 
 ## Ubuntu versions confirmed to work
