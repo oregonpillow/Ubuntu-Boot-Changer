@@ -1,6 +1,12 @@
 # Ubuntu-Boot-Changer
 A simple shell script to help you easily change the default boot logo / lock screen in Ubuntu.
 
+
+## Disclaimer
+Running any script requiring root permissions can be potentially dangerous. The simple checks the script performs before moving images should prevent any castostropic disasters, but I make no guarantees.
+In the case that you somehow upload an image the system can't recognize or find upon booting, it simply continues and displays no image (black screen).
+
+
 ## Requirements
 - An Ubuntu version that uses Plymouth (the application which provides the graphical "splash" screen when booting and shutting down an Ubuntu system).
 - **root permissions** (will be modifying images within Plymouth)
@@ -25,6 +31,3 @@ bash boot-modifier.sh
 - Assuming above 2 points are fine, creates a backup folder in the current dir and backups the current watermark/logo
 - replaces the current watermark/logo with your new images.
 
-## Disclaimer
-Running any script requiring root permissions can be potentially dangerous. The simple checks the script performs before moving images should prevent any castostropic disasters, but I make no guarantees.
-In the case that you somehow upload an image the system can't recognize or find upon booting, it simply continues and displays no image (black screen).
